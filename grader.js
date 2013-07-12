@@ -26,6 +26,10 @@ var program = require('commander');
 var cheerio = require('cheerio');
 var HTMLFILE_DEFAULT = "index.html";
 var CHECKSFILE_DEFAULT = "checks.json";
+var URL_HTMLFILE_DEFAULT = "";
+
+var http = require('http');
+
 
 var assertFileExists = function(infile) {
     var instr = infile.toString();
@@ -61,14 +65,33 @@ var clone = function(fn) {
     return fn.bind({});
 };
 
+var processChecks = function(infile,checksfile){                                                                                  
+    var checkJson = checkHtmlFile(infile, checksfile);                                                                               
+    var outJson = JSON.stringify(checkJson, null, 4);                                                                                
+    console.log(outJson);                                                                                                            
+};   
+
 if(require.main == module) {
-    program
+   program
         .option('-c, --checks <check_file>', 'Path to checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
         .option('-f, --file <html_file>', 'Path to index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
+	.option('-u, --url <url_html_file>', 'URL to index.html', null , URL_HTMLFILE_DEFAULT)
         .parse(process.argv);
-    var checkJson = checkHtmlFile(program.file, program.checks);
-    var outJson = JSON.stringify(checkJson, null, 4);
-    console.log(outJson);
+
+    if (program.url == null){
+        console.log("File Mode, checked the followinf file: "+program.file)
+        processChecks(program.file,program.checks);
+    }else {                                                           
+        console.log("URL Mode, fecthed the followinf URL: "+program.url)
+	var tmpfile = "tmp.html";
+        var file = fs.createWriteStream(tmpfile);
+        var request = http.get(program.url, function(response) {
+            console.log("ok");
+            response.pipe(file);
+	    setTimeout(function() {processChecks(tmpfile,program.checks);}, 1000);
+	});
+    } 
+
 } else {
     exports.checkHtmlFile = checkHtmlFile;
 }
