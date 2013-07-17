@@ -2,34 +2,46 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>My First Bitstarter</title>
-<link type="text/css" rel="stylesheet"
-      href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-2.3.2.css">
+<title>Qstarter</title>
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
+<link href="social-buttons.css" rel="stylesheet">   
 <style type="text/css">
-body{
- padding-top: 20px;
- padding-bottom: 40px; 
-}
-.container{ 
- width:960px;
-}
+ /* Large desktop */
+      @media (min-width: 980px) { 
+        body {
+         padding-top: 60px;
+        }
+      }
+/* Main body and headings */
+      body{
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+      }
+      .heading, .subheading {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        text-align: center;
+      }      
+
 p.lead{
  padding-top:15px;
 }
 .navigation, .pitch, .section1, .section2, .faq, .footer{
  padding: 10px 0px 10px 0px;
 }
-.video, .thermometer, .order, .social {
+
+.footer {
+ color:#666;
+}
+
+.thermometer, .order, .social {
  border: 1px dotted;
  text-align:center;
 }
 .video{
-/*internal border have 1px width, thus need to ass 4 x 1 px to 120 xp */
- height: 124px;
- line-height:124px
 }
 .thermometer, .order, .social{
-/*line-height to vertically center: http://phrogz.net/css/vertical-align/index.html*/
  Height:40px;
  line-height: 40px;
 }
@@ -39,64 +51,79 @@ div.row{
 </style>
 </head>
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Qstarter</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Blank</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+</div>
+
 <div class="container">
- <div class="row navigation">
-  <div class="span2 logo">
-   Logo
-  </div>
-  <div class="span6 blank">
-   Blank
-  </div>
-  <div class="span4 about">
-   About
-  </div>
- </div> 
- <div class="row heading">
+ <div class="row-fluid heading">
     <div class="span12">
-      <h1>Bistarter Tile</h1>
+      <center><h1>Qstarter</h1></center>
     </div>
    </div>
-  <div class="row subheading">
+  <div class="row-fluid subheading">
    <div class="span12"> 
-    <p class="lead">This is my first Bitsarter project.</p>
+    <p class="lead">Product description.</p>
    </div>  
   </div>
-  <div class="row pitch">
+  <div class="row-fluid pitch">
    <div class="span6 video">
-    Video 
+   <img src="http://placehold.it/640x480" />
    </div>
    <div class="span6">
     <div class="thermometer">
      Thermometer
     </div>
     <div class="order">
-      Order
+      <a href="#" class="btn btn-success btn-large"><i class="icon-white icon-ok"></i> Order Me Now</a>
     </div> 
     <div class="social">
-      Social
+      <button class="btn btn-facebook"><i class="icon-facebook"></i></button>
+       <button class="btn btn-twitter"><i class="icon-twitter"></i></button>
+       <button class="btn btn-google-plus"><i class="icon-google-plus"></i></button>
     </div>
    </div>
   </div>
-  <div class="row section1">
+  <div class="row-fluid section1">
     <div class="span12">
-      Marketing section 1
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque eros sem, quis interdum purus accumsan non. Integer fermentum scelerisque enim. Nulla non elementum leo, auctor ullamcorper urna. Nullam sit amet feugiat ligula. In sit amet lorem dui. Phasellus semper sem justo, non accumsan arcu bibendum ut. Morbi fringilla sem tortor, id congue velit elementum a. Aenean eget est libero.
+        Proin magna mi, porttitor eget sem nec, volutpat mattis felis. Nam et enim sit amet leo sodales porttitor. Praesent sit amet euismod orci, et dictum risus. Sed a tellus et tortor malesuada vestibulum luctus vel velit. Etiam placerat mollis augue id ultricies. Pellentesque nisi sem, luctus sit amet neque eu, convallis iaculis nibh. Donec vitae diam et lectus volutpat ornare. Aliquam lobortis vehicula justo eget scelerisque. Morbi eget pellentesque justo. Donec commodo tellus ullamcorper, commodo mauris ut, tincidunt neque. Praesent faucibus leo et justo molestie fermentum. Mauris non mollis tortor, ac consectetur magna. Vivamus eu dolor cursus, gravida nibh in, posuere arcu. Nullam tincidunt euismod augue imperdiet fermentum. Phasellus mauris elit, placerat ut augue a, porttitor venenatis mauris.
     </div>
   </div>
-  <div class="row section2">
+  <div class="row-fluid section2">
     <div class="span12">
-      Marketing section 2
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis felis sit amet mauris mollis, at molestie nisi convallis. Mauris nec tellus diam. Vestibulum nec hendrerit mi. In auctor, ante in dictum aliquam, lorem tellus varius lacus, et feugiat lorem mi ut est. Suspendisse tincidunt commodo condimentum. Ut tempus, mauris ut tristique condimentum, justo sem tristique risus, eget tincidunt mauris est a ante. Aenean vitae ligula eget leo viverra consectetur. Suspendisse potenti. Proin quis tortor a massa interdum mollis a quis nibh. Nullam vitae nunc dolor. Donec purus arcu, interdum ac eros ut, auctor interdum tellus. Pellentesque luctus volutpat mi, nec volutpat neque pretium id. Curabitur faucibus ligula ut leo aliquet volutpat.
     </div>
   </div>
-  <div class="row faq">
+  <div class="row-fluid faq">
     <div class="span12">
       FAQ
    </div>
   </div>
-  <div class="row footer">
-    <div class="span12">
-      Footer
+</div><!-- /container -->
+ <div class="footer navbar "">
+   <div class="container">
+    <center>Footer</center>
     </div>
-  </div>
 </div>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
