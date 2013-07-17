@@ -9,45 +9,81 @@
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
 <link href="social-buttons.css" rel="stylesheet">   
 <style type="text/css">
- /* Large desktop */
-      @media (min-width: 980px) { 
-        body {
-         padding-top: 60px;
-        }
-      }
-/* Main body and headings */
-      body{
-        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-      }
-      .heading, .subheading {
-        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-        text-align: center;
-      }      
+  /* Screen Desktop size */
+  @media (min-width: 980px) { 
+  body {
+   padding-top: 60px;
+  }
+  }
+  @media (max-width: 780px) { 
+  .bit-pic {
+  padding-top:10px;
+  }
+  
+  .bit-tools{
+  margin-top:10px;
+  }
+  }
+  
+  /* Main body and headings */
+  body{
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  }
+  .bit-heading, .bit-subheading, .bit-backers, .bit-money, .bit-dleft{
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  text-align: center;
+  }      
+  
+  h3.bit-faq{
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  }
+  @
+  p.bit-lead{
+   padding-top:15px;
+  }
+  .bit-pitch, .bit-section1, .bit-section2, .bit-faq, .bit-footer{
+   padding: 10px 0px 10px 0px;
+  }
+  .bit-backers{
+  padding-top:10px;
+  }
+  .bit-backers, .bit-money, .bit-dleft{
+  font-weight:bold;
+  line-height:30px;
+  color:white;
+  font-size:1.7em;
+  }
 
-p.lead{
- padding-top:15px;
-}
-.navigation, .pitch, .section1, .section2, .faq, .footer{
- padding: 10px 0px 10px 0px;
-}
+  .bit-footer {
+   color:#999;
+  }
+  
+  .bit-tools{
+  background-color:#333;
+  }
+  .bit-thermometer-container{
+  
+  }
 
-.footer {
- color:#666;
-}
-
-.thermometer, .order, .social {
- border: 1px dotted;
- text-align:center;
-}
-.video{
-}
-.thermometer, .order, .social{
- Height:40px;
- line-height: 40px;
-}
-div.row{
- border: 1px solid;
-}
+  .bit-thermometer, .bit-order, .bit-social {
+   /*border: 1px dotted;*/
+   text-align:center;
+  }
+  .bit-video{
+  }
+  .bit-thermometer{
+   Height:100px;
+   width:80%;
+  }
+   .bit-order, .bit-social{
+   Height:40px;
+   line-height: 40px;
+  }
+  
+  .bit-order{
+  padding-bottom:10px;
+  }
+  
 </style>
 </head>
 <body>
@@ -59,10 +95,10 @@ div.row{
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Qstarter</a>
+          <a class="brand" href="#">Logo</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Blank</a></li>
+              <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -72,58 +108,119 @@ div.row{
 </div>
 
 <div class="container">
- <div class="row-fluid heading">
+ <div class="row-fluid bit-heading">
     <div class="span12">
-      <center><h1>Qstarter</h1></center>
+      <center><h1>Product Name</h1></center>
     </div>
    </div>
-  <div class="row-fluid subheading">
+  <div class="row-fluid bit-subheading">
    <div class="span12"> 
-    <p class="lead">Product description.</p>
+    <p class="bit-lead">Product description.</p>
    </div>  
   </div>
-  <div class="row-fluid pitch">
+  <div class="row-fluid bit-pitch">
    <div class="span6 video">
-   <img src="http://placehold.it/640x480" />
+     <center><img src="http://placehold.it/640x480" /></center>
    </div>
-   <div class="span6">
-    <div class="thermometer">
-     Thermometer
-    </div>
-    <div class="order">
-      <a href="#" class="btn btn-success btn-large"><i class="icon-white icon-ok"></i> Order Me Now</a>
-    </div> 
-    <div class="social">
-      <button class="btn btn-facebook"><i class="icon-facebook"></i></button>
-       <button class="btn btn-twitter"><i class="icon-twitter"></i></button>
-       <button class="btn btn-google-plus"><i class="icon-google-plus"></i></button>
-    </div>
-   </div>
+   <div class="span6 bit-tools">
+   
+     <div class="bit-backers">
+       <p>1000 Backers</p>
+       </div>
+     <div class="bit-money">
+       <p>$1 000 000</p>
+       </div>
+     <div class="bit-dleft">
+       <p>50 days left</p>
+       </div>
+     <div class="bit-thermometer-container">
+       <center>
+	 <div class="bit-thermometer">
+	   <p>&nbsp;</p>
+	    <div class="progress">
+	      <div class="bar bar-success" style="width: 35%;"></div>
+	      <div class="bar bar-warning" style="width: 20%;"></div>
+	      <div class="bar bar-danger" style="width: 10%;"></div>
+	      </div>
+	    </div>
+	 </center>
+       </div>
+     <div class="bit-order">
+         <a href="#" class="btn btn-success btn-large"><i class="icon-white icon-ok"></i> Order Me Now</a>
+	 </div> 
+     <div class="bit-social">
+         <button class="btn btn-facebook"><i class="icon-facebook"></i></button>
+	    <button class="btn btn-twitter"><i class="icon-twitter"></i></button>
+	       <button class="btn btn-google-plus"><i class="icon-google-plus"></i></button>
+	       </div>
+     
+     </div>
   </div>
-  <div class="row-fluid section1">
+  <div class="row-fluid bit-section1">
     <div class="span12">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque eros sem, quis interdum purus accumsan non. Integer fermentum scelerisque enim. Nulla non elementum leo, auctor ullamcorper urna. Nullam sit amet feugiat ligula. In sit amet lorem dui. Phasellus semper sem justo, non accumsan arcu bibendum ut. Morbi fringilla sem tortor, id congue velit elementum a. Aenean eget est libero.
-        Proin magna mi, porttitor eget sem nec, volutpat mattis felis. Nam et enim sit amet leo sodales porttitor. Praesent sit amet euismod orci, et dictum risus. Sed a tellus et tortor malesuada vestibulum luctus vel velit. Etiam placerat mollis augue id ultricies. Pellentesque nisi sem, luctus sit amet neque eu, convallis iaculis nibh. Donec vitae diam et lectus volutpat ornare. Aliquam lobortis vehicula justo eget scelerisque. Morbi eget pellentesque justo. Donec commodo tellus ullamcorper, commodo mauris ut, tincidunt neque. Praesent faucibus leo et justo molestie fermentum. Mauris non mollis tortor, ac consectetur magna. Vivamus eu dolor cursus, gravida nibh in, posuere arcu. Nullam tincidunt euismod augue imperdiet fermentum. Phasellus mauris elit, placerat ut augue a, porttitor venenatis mauris.
+     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque eros sem, quis interdum purus accumsan non. Integer fermentum scelerisque enim. Nulla non elementum leo, auctor ullamcorper urna. Nullam sit amet feugiat ligula. In sit amet lorem dui. Phasellus semper sem justo, non accumsan arcu bibendum ut. Morbi fringilla sem tortor, id congue velit elementum a. Aenean eget est libero.</p>
+     <p>Proin magna mi, porttitor eget sem nec, volutpat mattis felis. Nam et enim sit amet leo sodales porttitor. Praesent sit amet euismod orci, et dictum risus. Sed a tellus et tortor malesuada vestibulum luctus vel velit. Etiam placerat mollis augue id ultricies. Pellentesque nisi sem, luctus sit amet neque eu, convallis iaculis nibh. Donec vitae diam et lectus volutpat ornare. Aliquam lobortis vehicula justo eget scelerisque. Morbi eget pellentesque justo. Donec commodo tellus ullamcorper, commodo mauris ut, tincidunt neque. Praesent faucibus leo et justo molestie fermentum. Mauris non mollis tortor, ac consectetur magna. Vivamus eu dolor cursus, gravida nibh in, posuere arcu. Nullam tincidunt euismod augue imperdiet fermentum. Phasellus mauris elit, placerat ut augue a, porttitor venenatis mauris.</p>
     </div>
   </div>
-  <div class="row-fluid section2">
+  <div class="row-fluid gallery">
+    <div class="span4 bit-pic">
+      <center><img src="http://placehold.it/480x250" /></center>
+    </div>
+     <div class="span4 bit-pic">
+       <center><img src="http://placehold.it/480x250" /></center>
+    </div>
+     <div class="span4 bit-pic">
+       <center><img src="http://placehold.it/480x250" /></center>
+    </div>
+  </div>
+  <div class="row-fluid bit-section2">
     <div class="span12">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis felis sit amet mauris mollis, at molestie nisi convallis. Mauris nec tellus diam. Vestibulum nec hendrerit mi. In auctor, ante in dictum aliquam, lorem tellus varius lacus, et feugiat lorem mi ut est. Suspendisse tincidunt commodo condimentum. Ut tempus, mauris ut tristique condimentum, justo sem tristique risus, eget tincidunt mauris est a ante. Aenean vitae ligula eget leo viverra consectetur. Suspendisse potenti. Proin quis tortor a massa interdum mollis a quis nibh. Nullam vitae nunc dolor. Donec purus arcu, interdum ac eros ut, auctor interdum tellus. Pellentesque luctus volutpat mi, nec volutpat neque pretium id. Curabitur faucibus ligula ut leo aliquet volutpat.
     </div>
   </div>
-  <div class="row-fluid faq">
+  <div class="row-fluid bit-faq">
     <div class="span12">
-      FAQ
-   </div>
+    <h3>FAQ</h3>
+     <div class="accordion" id="accordion2">
+         <div class="accordion-group">
+	   <div class="accordion-heading">
+	       <a class="accordion-toggle" data-toggle="collapse"
+		   data-parent="#accordion2" href="#collapseOne">
+		 Whill I be happy whith your hubber product?
+		   </a>
+	       </div>
+	   <div id="collapseOne" class="accordion-body collapse">
+	       <div class="accordion-inner">
+		 Yes until the end of days.
+		   </div>
+	       </div>
+	     </div>
+	   <div class="accordion-group">
+	     <div class="accordion-heading">
+	         <a class="accordion-toggle" data-toggle="collapse"
+		     data-parent="#accordion2" href="#collapseTwo">
+		   How many hours should I sleep?
+		     </a>
+		 </div>
+	     <div id="collapseTwo" class="accordion-body collapse">
+	         <div class="accordion-inner">
+		   8 will be good.
+		     </div>
+		 </div>
+	       </div>
+	   </div>
   </div>
+ </div>
+ </div>
 </div><!-- /container -->
- <div class="footer navbar "">
+
+<div class="bit-footer "">
    <div class="container">
-    <center>Footer</center>
+    <center>Product @Copyright 2013</center>
     </div>
-</div>
+</div><!-- /footer -->
+
 <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
