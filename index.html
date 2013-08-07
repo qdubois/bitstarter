@@ -107,6 +107,10 @@
   padding-top:20px;
   }
   
+  div.addthis_toolbox {
+  width:250px;
+  margin: 0 auto;
+ }
 </style>
 </head>
 <body>
@@ -172,12 +176,16 @@
          <a href="#" class="btn btn-success btn-large"><i class="icon-white icon-ok"></i> Please Support Us</a>
 	 </div> 
      <div class="bit-social">
-       <div class="addthis_toolbox addthis_default_style ">
-	 <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-	 <a class="addthis_button_tweet"></a>
-	 <a class="addthis_button_pinterest_pinit"></a>
-	 <a class="addthis_counter addthis_pill_style"></a>
-       </div>
+       <center>
+	 <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+	   <a class="addthis_button_preferred_1"></a>
+	   <a class="addthis_button_preferred_2"></a>
+	   <a class="addthis_button_preferred_3"></a>
+	   <a class="addthis_button_preferred_4"></a>
+	   <a class="addthis_button_compact"></a>
+	   <a class="addthis_counter addthis_bubble_style"></a>
+	 </div>
+       </center>
      </div>
     
      </div>
@@ -259,5 +267,15 @@
 <!-- AddThis Button END -->
 <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43013280-1', 'herokuapp.com');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
